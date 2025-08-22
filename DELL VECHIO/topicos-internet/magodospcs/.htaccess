@@ -1,29 +1,29 @@
-# Ativa o modo de reescrita
+#ativa o modo de reescrita
 RewriteEngine On
 
-# bloqueio acesso as pastas especificas
+# bloqueia acesso a pastas específicas
 RewriteRule ^(app|config|vendor)/ - [F,L]
 
-# bloqueio a extensões de arquivos especificos
+#bloqueio a extensões de arquivos específicos
 <FilesMatch "(\.env|\.git|\.htaccess|composer\.json|composer\.lock|readme\.md)">
     Require all denied
 </FilesMatch>
 
-# bloqueio de edição de arquivos e pastas
+#bloqueio de edição de arquivos e pastas
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# redireciona todas as requisições para o arquivo index.php na raiz do projeto
+#redireciona todas as requisições para o arquivo index.php na raiz
 RewriteRule ^ index.php [QSA,L]
 
-# Define o conjunto de caracteres
+#define o conjunto de caracteres
 AddDefaultCharset UTF-8
 
-# Ignora a listagem de diretorios
+#ignora a listagem de diretórios
 Options -Indexes
 IndexIgnore *
 
-# (opcional) - renovar cache
+#opcional - renovar cache
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpeg "access plus 1 month"
