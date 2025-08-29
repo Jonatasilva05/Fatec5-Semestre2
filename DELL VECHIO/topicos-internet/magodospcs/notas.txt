@@ -22,6 +22,7 @@
 <?php
 
     # Serve para permitir que consigamos ver o que tem dentro do $_SERVER
+    # Despeja todos os caracteres da variável
     var_dump() 
 
 ?>
