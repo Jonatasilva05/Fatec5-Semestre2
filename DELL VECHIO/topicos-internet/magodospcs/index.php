@@ -1,5 +1,17 @@
 <?php
 
+    include_once __DIR__ . "/app/models/Produto.php";
+
+    $mouseM100 = new Produto();
+    $mouseM100->setId(10);
+
+    $memoriaram16gb = new Produto();
+    $memoriaram16gb->setId(15);
+
+    echo $memoriaram16gb;
+
+    exit;
+
     # Recebe todas as URI que vem do servidor, (requisições que vem do servidor), incluindo argumentos
     $uritotal = $_SERVER["REQUEST_URI"];
 

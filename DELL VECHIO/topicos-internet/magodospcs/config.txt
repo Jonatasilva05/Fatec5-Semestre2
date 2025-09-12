@@ -2,3 +2,45 @@ Para configurar o xampp para ter uma segurança
 
     DocumentRoot "C:/xampp/htdocs/magodospcs"
     <Directory "C:/xampp/htdocs/magodospcs">
+
+🔓 public
+
+✅ Você disse: “todos podem acessar de fora e modificar”
+✔️ Correto → qualquer classe, mesmo externa, consegue acessar.
+⚠️ Mas lembre: não é obrigatório modificar — pode ser apenas visível.
+👉 Exemplo:
+
+```bash
+public String nome; // qualquer classe pode acessar
+```
+
+🔒 private
+
+❌ Você disse: “ninguém e nada acessa ele”
+✔️ Ajuste: só a própria classe pode acessar.
+👉 Nem classes herdadas, nem externas conseguem.
+👉 Exemplo:
+
+```bash
+private double saldo; // só métodos da própria classe podem mexer
+```
+
+🛡 protected
+
+✅ Você disse: “o objeto em herança pode acessar”
+✔️ Correto → subclasses podem acessar mesmo estando em outro pacote.
+⚠️ Mas: dentro do mesmo pacote, qualquer classe também consegue acessar (mesmo sem herança).
+
+👉 Exemplo:
+
+```bash
+protected int idade; // subclasses e classes do mesmo pacote podem acessar
+```
+
+📌 Resumo final:
+
+public → qualquer classe pode acessar.
+
+private → só a própria classe acessa.
+
+protected → subclasses e classes do mesmo pacote podem acessar.
