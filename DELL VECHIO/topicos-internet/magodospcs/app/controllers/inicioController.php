@@ -1,5 +1,9 @@
 <?php
-    $nomepagina = "MagodosPcs - Inicio"
+
+    $nomepagina = "MagodosPcs - Inicio";
+
+    $css = "../../css/estilos.css";
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +14,15 @@
     
 <body>
 
-    <?php include_once __DIR__ . "/../views/header.php"; ?>
+    <?php 
+    
+        include_once __DIR__ . "/../views/header.php"; 
+
+        include_once __DIR__ . "/../views/paginaInicial.php";
+
+        include_once __DIR__ . "/../views/footer.php"
+    
+    ?>
 
 </body>
 </html>

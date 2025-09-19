@@ -10,7 +10,13 @@
 
 <body>
 
-    <?php include_once __DIR__ . "/../views/header.php"; ?>
+    <?php
+    
+        include_once __DIR__ . "/../views/header.php";
+        include_once __DIR__ . "/../views/quemSomos.php";
+        include_once __DIR__ . "/../views/footer.php";
+
+    ?>
 
 </body>
 </html>
